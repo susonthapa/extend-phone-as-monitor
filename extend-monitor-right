@@ -1,0 +1,9 @@
+#! /bin/sh
+
+xrandr --newmode "mobile-right" 40.78  960 992 1088 1216  540 541 544 559  -HSync +Vsync
+
+xrandr --addmode HDMI-1 mobile-right
+
+xrandr --output HDMI-1 --mode mobile-right --right-of eDP-1
+
+x11vnc -clip 960x540+1920+0 -nocursorshape
